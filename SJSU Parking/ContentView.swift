@@ -5,29 +5,39 @@
 //  Created by Brian Ou on 5/19/26.
 //
 
-import SwiftUI
-import SwiftData
 import MapKit
+import SwiftData
+import SwiftUI
 
 struct ContentView: View {
     // Map Position
     @State private var position = MapCameraPosition.region(
+        // SJSU
         MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 37.3361257, longitude: -121.8812224),
+            center: CLLocationCoordinate2D(
+                latitude: 37.3361257,
+                longitude: -121.8812224
+            ),
+            // Zoom
             span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.005)
         )
     )
-    
-    // Map Style
 
     // Display Map
     var body: some View {
         Map(position: $position)
-            .edgesIgnoringSafeArea(.all) // Fills the entire screen
+            .edgesIgnoringSafeArea(.all)  // Fills the entire screen
+            .mapStyle(
+                .standard(
+                    elevation: .realistic,
+                    pointsOfInterest: .including(.university, .parking),
+                    showsTraffic: true
+                )
+            )
+            .preferredColorScheme(.dark)  // Dark Mode
+
     }
 }
-
-
 
 #Preview {
     ContentView()
