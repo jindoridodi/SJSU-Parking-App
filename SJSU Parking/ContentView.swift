@@ -13,8 +13,8 @@ struct ContentView: View {
     // Map Position
     @State private var position = MapCameraPosition.region(
         MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 37.3354742, longitude: -121.8825412),
-            span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            center: CLLocationCoordinate2D(latitude: 37.3361257, longitude: -121.8812224),
+            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.005)
         )
     )
     
