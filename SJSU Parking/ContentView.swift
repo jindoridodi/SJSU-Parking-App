@@ -6,7 +6,6 @@
 //
 
 import MapKit
-import SwiftData
 import SwiftUI
 
 struct ContentView: View {
@@ -25,7 +24,7 @@ struct ContentView: View {
 
     // Display Map
     var body: some View {
-        Map(position: $position)
+        Map(position: $position, interactionModes: [])  // interactionModes: [] disables user map movement
             .edgesIgnoringSafeArea(.all)  // Fills the entire screen
             .mapStyle(
                 .standard(
@@ -35,11 +34,15 @@ struct ContentView: View {
                 )
             )
             .preferredColorScheme(.dark)  // Dark Mode
+            .task {
+                print("Running scraper...")
+                let scraper = ParkingScrape()
+                await scraper.getHTML()
+            }
 
     }
 }
 
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }

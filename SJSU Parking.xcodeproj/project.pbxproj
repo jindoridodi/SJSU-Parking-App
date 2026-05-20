@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B85763BE2FBD4DEB006EA564 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = B85763BD2FBD4DEB006EA564 /* SwiftSoup */; };
+		B85763C02FBD4E01006EA564 /* SwiftSoupProfile in Frameworks */ = {isa = PBXBuildFile; productRef = B85763BF2FBD4E01006EA564 /* SwiftSoupProfile */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B8B0E1592FBD22C500987AAC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85763BE2FBD4DEB006EA564 /* SwiftSoup in Frameworks */,
+				B85763C02FBD4E01006EA564 /* SwiftSoupProfile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +79,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B85763BC2FBD4DEB006EA564 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B8B0E1402FBD22C400987AAC = {
 			isa = PBXGroup;
 			children = (
 				B8B0E14B2FBD22C400987AAC /* SJSU Parking */,
 				B8B0E15B2FBD22C500987AAC /* SJSU ParkingTests */,
 				B8B0E1652FBD22C500987AAC /* SJSU ParkingUITests */,
+				B85763BC2FBD4DEB006EA564 /* Frameworks */,
 				B8B0E14A2FBD22C400987AAC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,6 +127,8 @@
 			);
 			name = "SJSU Parking";
 			packageProductDependencies = (
+				B85763BD2FBD4DEB006EA564 /* SwiftSoup */,
+				B85763BF2FBD4E01006EA564 /* SwiftSoupProfile */,
 			);
 			productName = "SJSU Parking";
 			productReference = B8B0E1492FBD22C400987AAC /* SJSU Parking.app */;
@@ -195,6 +212,9 @@
 			);
 			mainGroup = B8B0E1402FBD22C400987AAC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B8B0E1752FBD344900987AAC /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B8B0E14A2FBD22C400987AAC /* Products */;
 			projectDirPath = "";
@@ -400,8 +420,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,8 +450,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -570,6 +588,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B8B0E1752FBD344900987AAC /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.13.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B85763BD2FBD4DEB006EA564 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8B0E1752FBD344900987AAC /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		B85763BF2FBD4E01006EA564 /* SwiftSoupProfile */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8B0E1752FBD344900987AAC /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoupProfile;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B8B0E1412FBD22C400987AAC /* Project object */;
 }
