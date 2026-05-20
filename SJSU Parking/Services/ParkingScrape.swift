@@ -10,7 +10,8 @@ import SwiftSoup
 
 final class ParkingScrape {
     // Function to get HTML of SJSU Parking Website
-    func getHTML() async -> [Int]? {
+    // Returns Int Array of Garage Fullnesses
+    func getParking() async -> [Int]? {
         // SJSU Webpage
         guard let url = URL(string: "https://sjsuparkingstatus.sjsu.edu/")
         else {
@@ -39,11 +40,13 @@ final class ParkingScrape {
                 }
             }
 
+            #if DEBUG
             // Print array
             print("Garage Fullness Array:")
             for garageFullness in garageFullnessArray {
                 print(garageFullness)
             }
+            #endif
 
             // Return Fullness Array
             // [North Garage, West Garage, South Garage, South Campus Garage]
